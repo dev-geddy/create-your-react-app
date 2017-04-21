@@ -45,3 +45,16 @@ You may start changing some text on App.js for a start.
 ## Building the React application
 
 In this repository I am building sample ReactJS application and you may look at commits to see how things are done step by step. I'll try to keep it as simple as possible.
+
+## Learning Resources
+
+- HTML: https://www.w3schools.com/html/
+- CSS: https://www.w3schools.com/css/
+- JavaScript: https://www.w3schools.com/js/
+- ReactJS: https://facebook.github.io/react/docs/hello-world.html
+
+The latest projects use the next version of JavaScript called "ES6" a.k.a. "ES2015".
+You may find it useful to read about the features and syntax updates regarding ES6 over here: https://github.com/lukehoban/es6features#arrows 
+
+I also recommend to read https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html to understand what "create-react-app" is.
+By creating this project I assume that you already know what is HTML, CSS and have some understanding of JavaScript as well as basics of programming.
