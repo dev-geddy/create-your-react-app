@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
+        <header className="App-header">
           <h1>
             My React Site
           </h1>
@@ -16,13 +16,13 @@ class App extends Component {
             </ul>
           </nav>
         </header>
-        <section>
+        <section className="App-body">
           <article>
             <h2>Home</h2>
             <p>Hello people, let's build the React application!</p>
           </article>
         </section>
-        <footer>
+        <footer className="App-footer">
           Built to help people learn React! It's 2017 now.
         </footer>
       </div>
