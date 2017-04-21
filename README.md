@@ -12,7 +12,7 @@ To get ready for installing scripts for your application you need to install nec
 - install Xcode from AppStore. It includes necessary toolset for developers (we need Git for that)
 
 ### Windows platform
-- install Git, so you'll be able to use GitHub (or other alternatives) as well as have Unix-like Terminal called "GitBash".
+- install Git, so you'll be able to use GitHub (or other alternatives) as well as have Unix-like Terminal called "GitBash". Download from: https://git-scm.com/download/win
 
 ## Initialize development setup
 There always is some preparation work to do before starting the actual application development.
