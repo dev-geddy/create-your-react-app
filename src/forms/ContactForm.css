@@ -1,0 +1,31 @@
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 5px;
+  line-height: 19px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid lightgrey;
+  font-size: 15px;
+}
+
+button {
+  background-color: steelblue;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 15px;
+  line-height: 23px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ContactForm-row {
+  padding: 5px 0;
+}
+
+.ContactForm-row > label {
+  padding-bottom: 5px;
+  display: block;
+}

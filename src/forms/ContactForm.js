@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import './ContactForm.css';
 
 export class ContactForm extends Component {
 
   state = {
     name: '',
     email: '',
-    message: '',
+    message: ''
   }
 
   handleFormSubmit = (event) => {
@@ -15,23 +16,34 @@ export class ContactForm extends Component {
 
   handleChange = (event) => {
     console.log(`onChange for ${event.target.id}: ${event.target.value}`);
+    const { id, value } = event.target;
     let newState = {
       ...this.state
     };
-    newState[event.target.id] = event.target.value;
+    if (newState[id] !== undefined) {
+      newState[id] = value;
+    }
     this.setState(newState);
   }
 
   render() {
     return (
       <form onSubmit={this.handleFormSubmit}>
-        <label htmlFor="name">Name:</label><br />
-        <input type="text" id="name" onChange={this.handleChange}/><br />
-        <label htmlFor="email">Email:</label><br />
-        <input type="email" id="email" onChange={this.handleChange}/><br />
-        <label htmlFor="message">Message:</label><br />
-        <textArea id="message" onChange={this.handleChange}/><br />
-        <button type="submit">Send it!</button>
+        <div className="ContactForm-row">
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" onChange={this.handleChange}/>
+        </div>
+        <div className="ContactForm-row">
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" onChange={this.handleChange}/>
+        </div>
+        <div className="ContactForm-row">
+          <label htmlFor="message">Message:</label>
+          <textArea id="message" onChange={this.handleChange}/>
+        </div>
+        <div className="ContactForm-row">
+          <button type="submit">Send it!</button>
+        </div>
       </form>
     );
   }
