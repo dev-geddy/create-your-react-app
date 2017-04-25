@@ -3,10 +3,14 @@ import './ContactForm.css';
 
 export class ContactForm extends Component {
 
-  state = {
+  defaultState = {
     name: '',
     email: '',
     message: ''
+  }
+
+  state = {
+    ...this.defaultState
   }
 
   handleFormSubmit = (event) => {
@@ -17,27 +21,22 @@ export class ContactForm extends Component {
   handleChange = (event) => {
     console.log(`onChange for ${event.target.id}: ${event.target.value}`);
     const {id, value} = event.target;
-    let newState = {
-      ...this.state
-    };
-    if (newState[id] !== undefined) {
+    if (this.defaultState[id] !== undefined) {
+      let newState = {
+        ...this.state
+      };
       newState[id] = value;
+      this.setState(newState);
     }
-    this.setState(newState);
   }
 
   resetForm = (event) => {
     event.preventDefault();
-    this.setState({
-      name: '',
-      email: '',
-      message: ''
-    })
+    this.setState({...this.defaultState});
   }
 
   render() {
     const {name, email, message} = this.state;
-
     return (
       <form onSubmit={this.handleFormSubmit}>
         <div className="ContactForm-row">
@@ -54,7 +53,7 @@ export class ContactForm extends Component {
         </div>
         <div className="ContactForm-row">
           <button type="submit">Send it!</button>
-          <button onClick={this.resetForm}>Reset</button>
+          <button type="reset" onClick={this.resetForm}>Reset</button>
         </div>
       </form>
     );
