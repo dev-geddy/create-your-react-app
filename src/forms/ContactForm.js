@@ -14,7 +14,7 @@ export class ContactForm extends Component {
   }
 
   handleFormSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     console.log("handleFormSubmit, form data is: ", this.state);
   }
 
