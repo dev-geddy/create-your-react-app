@@ -15,11 +15,10 @@ export class ContactForm extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log("handleFormSubmit, form data is: ", this.state);
+    // data sending related functionality to follow here
   }
 
   handleChange = (event) => {
-    console.log(`onChange for ${event.target.id}: ${event.target.value}`);
     const {id, value} = event.target;
     if (this.defaultState[id] !== undefined) {
       let newState = {
