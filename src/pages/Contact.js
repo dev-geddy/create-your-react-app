@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from '../forms/ContactForm';
 
 const Contact = () => {
   return {
@@ -8,6 +9,7 @@ const Contact = () => {
           <article>
             <h2>Contact</h2>
             <p>You will be able to contact me from this page.</p>
+            <ContactForm />
           </article>
         </div>
       );
