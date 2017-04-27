@@ -1,16 +1,15 @@
-.App {
+.app {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   height: 100%;
 }
 
-.App-body {
+.app-body {
   flex: 1;
-  height: 100%;
 }
 
-.App-content-width {
+.app-content-width {
   max-width: 1000px; /* it will end up being 1000 - 2 * 15 = 970px with 15px of space on sides (responsive) */
   margin: 0 auto;
   padding: 0 15px;

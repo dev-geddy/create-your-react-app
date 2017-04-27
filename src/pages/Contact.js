@@ -5,7 +5,7 @@ const Contact = () => {
   return {
     render: () => {
       return (
-        <div className="App-content-width">
+        <div className="app-content-width">
           <article>
             <h2>Contact</h2>
             <p>You will be able to contact me from this page.</p>
