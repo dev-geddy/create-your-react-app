@@ -40,7 +40,7 @@ Remember: you will have to open your Terminal (or GitBash) everytime you get bac
 ## Starting development
 
 Open your project directory with a chose code editor (IDE) and start changing the code to see what happens every time you make a change.
-You may start changing some text on App.js for a start.
+You may start changing some text on App.js for a start and follow commits history for step by step code changes of this app here: https://github.com/g86/create-your-react-app/commits/master
 
 ## Building the React application
 
