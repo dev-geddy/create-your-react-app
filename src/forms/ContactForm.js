@@ -16,6 +16,8 @@ export class ContactForm extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     // data sending related functionality to follow here
+    console.log("FORM DATA: ", this.state);
+    alert("Check your browser console to see object containing form data!")
   }
 
   handleChange = (event) => {

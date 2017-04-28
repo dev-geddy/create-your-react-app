@@ -1,6 +1,8 @@
 # Create Your React App - Step by Step Guide
 React application build example from scratch. Watch commit messages and diffs for step by step guide!
 
+Quick intro on Medium: https://goo.gl/Q8K35X
+
 ## Preparation before starting up
 To get ready for installing scripts for your application you need to install necessary software onto your computer.
 
@@ -16,7 +18,7 @@ To get ready for installing scripts for your application you need to install nec
 
 ## Initialize development setup
 There always is some preparation work to do before starting the actual application development.
-This guide is being built based on "create-react-app" setup (https://goo.gl/GDFFDG).
+This guide is being built based on "create-react-app" setup (https://github.com/facebookincubator/create-react-app).
 
 The way I've initialise this project is running these commands on your MacOS terminal (or GitBash on Windows):
 1) install "create-react-app" script globally, so you'll be able to init as many apps as you want without needing to install it again and again.
@@ -53,6 +55,10 @@ Once you have built something and have a question "what do I do to host it somew
 npm run build
 ```
 When it's done - take all files from *build* folder and upload them to your hosting server (it may even be Apache).
+
+## Living example
+
+You can see this application live: https://goo.gl/NMwMkW
 
 
 ## Learning Resources
