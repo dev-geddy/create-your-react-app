@@ -13,6 +13,12 @@ const formFields = [{
   value: 'Hello world!'
 }];
 
+const mockFormData = {
+  name: 'John',
+  email: 'someone@some123domain.com',
+  message: 'Hello world!'
+};
+
 it('should render without crashing', () => {
   shallow(<ContactForm />);
 });
@@ -42,11 +48,6 @@ it('form submit should call handleFormSubmit function', () => {
   const mockEvent = {
     preventDefault: jest.fn()
   };
-  const mockFormData = {
-    name: 'John',
-    email: 'someone@some123domain.com',
-    message: 'Hello world'
-  };
   spyOn(component.nodes[0], 'handleFormSubmit').and.callThrough();
   component.setState({...mockFormData});
   component.find('form').at(0).simulate("submit", mockEvent);
@@ -58,11 +59,6 @@ it('reset button should clear the form', () => {
   const component = mount(<ContactForm />);
   const mockEvent = {
     preventDefault: jest.fn()
-  };
-  const mockFormData = {
-    name: 'John',
-    email: 'someone@some123domain.com',
-    message: 'Hello world'
   };
   spyOn(component.nodes[0], 'resetForm').and.callThrough();
   component.setState({...mockFormData});
