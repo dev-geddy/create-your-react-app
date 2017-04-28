@@ -46,6 +46,15 @@ You may start changing some text on App.js for a start and follow commits histor
 
 In this repository I am building sample ReactJS application and you may look at commits to see how things are done step by step. I'll try to keep it as simple as possible.
 
+## Ready to deploy?
+
+Once you have built something and have a question "what do I do to host it somewhere?". You need to run the following command to create a production ready bundle:
+```
+npm run build
+```
+When it's done - take all files from *build* folder and upload them to your hosting server (it may even be Apache).
+
+
 ## Learning Resources
 
 - HTML: https://www.w3schools.com/html/

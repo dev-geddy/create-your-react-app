@@ -2,6 +2,17 @@ import React from 'react';
 import ContactForm from './ContactForm';
 import { shallow, mount } from 'enzyme';
 
+const formFields = [{
+  id: 'name',
+  value: 'John'
+},{
+  id: 'email',
+  value: 'email@somedomain.com'
+},{
+  id: 'message',
+  value: 'Hello world!'
+}];
+
 it('should render without crashing', () => {
   shallow(<ContactForm />);
 });
@@ -13,40 +24,17 @@ it('should contain all inputs', () => {
   expect(component.find('button').length).toEqual(2);
 });
 
-it('name input should update the state', () => {
-  const component = mount(<ContactForm />);
-  const mockChangeEvent = {
-    target: {
-      id: "name",
-      value: "John"
-    }
-  };
-  component.find('input').at(0).simulate("change", mockChangeEvent);
-  expect(component.state().name).toEqual(mockChangeEvent.target.value);
-});
-
-it('email input should update the state', () => {
-  const component = mount(<ContactForm />);
-  const mockChangeEvent = {
-    target: {
-      id: "email",
-      value: "email@somedomain.com"
-    }
-  };
-  component.find('input').at(1).simulate("change", mockChangeEvent);
-  expect(component.state().email).toEqual(mockChangeEvent.target.value);
-});
-
-it('message textarea should update the state', () => {
-  const component = mount(<ContactForm />);
-  const mockChangeEvent = {
-    target: {
-      id: "message",
-      value: "Hello world!"
-    }
-  };
-  component.find('textArea').at(0).simulate("change", mockChangeEvent);
-  expect(component.state().message).toEqual(mockChangeEvent.target.value);
+describe('all inputs should update on change', () => {
+  formFields.forEach((formField) => {
+    it(`input "${formField.id}" should update the state`, () => {
+      const component = mount(<ContactForm />);
+      const mockChangeEvent = {
+        target: {...formField}
+      };
+      component.find(`#${formField.id}`).at(0).simulate("change", mockChangeEvent);
+      expect(component.state()[formField.id]).toEqual(mockChangeEvent.target.value);
+    });
+  });
 });
 
 it('form submit should call handleFormSubmit function', () => {
