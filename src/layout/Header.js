@@ -6,12 +6,15 @@ import menuItems from '../sampleData/menuItems';
 class Header extends Component {
   renderMenuItems(menuItems) {
     return menuItems.map((menuItem, index) => {
+      const addProps = {
+        to: menuItem.to,
+        exact: menuItem.exact
+      };
       return (
         <li key={index}>
-          <NavLink to={menuItem.to}
-                   className="menu-item"
-                   exact={menuItem.exact ? true : false}
-                   activeClassName="menu-itm--current">{menuItem.caption}</NavLink>
+          <NavLink className="menu-item"
+                   activeClassName="menu-itm--current"
+                   {...addProps}>{menuItem.caption}</NavLink>
         </li>
       );
     });
