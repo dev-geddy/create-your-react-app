@@ -7,7 +7,7 @@ const Home = () => {
         <div className="app-content-width">
           <article>
             <h2>Home</h2>
-            <p>Hello people, let's build the React application!</p>
+            <p>Hello people, let`s build the React application!</p>
           </article>
         </div>
       )
