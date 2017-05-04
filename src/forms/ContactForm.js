@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import './ContactForm.css';
+import React, {Component} from 'react'
+import './ContactForm.css'
 
 export class ContactForm extends Component {
 
@@ -14,30 +14,30 @@ export class ContactForm extends Component {
   }
 
   handleFormSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     // data sending related functionality to follow here
-    console.log("FORM DATA: ", this.state);
+    console.log("FORM DATA: ", this.state)
     alert("Check your browser console to see object containing form data!")
   }
 
   handleChange = (event) => {
-    const {id, value} = event.target;
+    const {id, value} = event.target
     if (this.defaultState[id] !== undefined) {
       let newState = {
         ...this.state
-      };
-      newState[id] = value;
-      this.setState(newState);
+      }
+      newState[id] = value
+      this.setState(newState)
     }
   }
 
   resetForm = (event) => {
-    event.preventDefault();
-    this.setState({...this.defaultState});
+    event.preventDefault()
+    this.setState({...this.defaultState})
   }
 
   render() {
-    const {name, email, message} = this.state;
+    const {name, email, message} = this.state
     return (
       <form onSubmit={this.handleFormSubmit}>
         <div className="ContactForm-row">
@@ -57,8 +57,8 @@ export class ContactForm extends Component {
           <button type="reset" onClick={this.resetForm}>Reset</button>
         </div>
       </form>
-    );
+    )
   }
 }
 
-export default ContactForm;
+export default ContactForm

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import './Header.css';
-import {NavLink} from 'react-router-dom';
-import menuItems from '../sampleData/menuItems';
+import React, {Component} from 'react'
+import './Header.css'
+import {NavLink} from 'react-router-dom'
+import menuItems from '../sampleData/menuItems'
 
 class Header extends Component {
   renderMenuItems(menuItems) {
@@ -9,15 +9,15 @@ class Header extends Component {
       const addProps = {
         to: menuItem.to,
         exact: menuItem.exact
-      };
+      }
       return (
         <li key={index}>
           <NavLink className="menu-item"
                    activeClassName="menu-itm--current"
                    {...addProps}>{menuItem.caption}</NavLink>
         </li>
-      );
-    });
+      )
+    })
   }
 
   render() {
@@ -34,8 +34,8 @@ class Header extends Component {
           </nav>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header

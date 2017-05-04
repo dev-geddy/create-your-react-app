@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Home = () => {
   return {
@@ -10,9 +10,9 @@ const Home = () => {
             <p>Hello people, let's build the React application!</p>
           </article>
         </div>
-      );
+      )
     }
   }
 }
 
-export default Home;
+export default Home

@@ -1,5 +1,5 @@
-import React from 'react';
-import ContactForm from '../forms/ContactForm';
+import React from 'react'
+import ContactForm from '../forms/ContactForm'
 
 const Contact = () => {
   return {
@@ -12,9 +12,9 @@ const Contact = () => {
             <ContactForm />
           </article>
         </div>
-      );
+      )
     }
   }
 }
 
-export default Contact;
+export default Contact

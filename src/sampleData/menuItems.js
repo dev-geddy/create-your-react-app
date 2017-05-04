@@ -8,6 +8,6 @@ const menuItems = [
     to: '/contact',
     caption: 'Contact'
   }
-];
+]
 
-export default menuItems;
+export default menuItems

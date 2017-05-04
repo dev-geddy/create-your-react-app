@@ -1,7 +1,7 @@
-import React from 'react';
-import Home from './Home';
-import { shallow } from 'enzyme';
+import React from 'react'
+import Home from './Home'
+import { shallow } from 'enzyme'
 
 it('renders without crashing', () => {
-  shallow(<Home />);
-});
+  shallow(<Home />)
+})
