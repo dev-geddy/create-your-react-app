@@ -1,20 +1,9 @@
 import React, {Component} from 'react';
 import './Header.css';
 import {NavLink} from 'react-router-dom';
+import menuItems from '../sampleData/menuItems';
 
 class Header extends Component {
-  menuItems = [
-    {
-      to: '/',
-      caption: 'Home',
-      exact: true
-    },
-    {
-      to: '/contact',
-      caption: 'Contact'
-    }
-  ];
-
   renderMenuItems(menuItems) {
     return menuItems.map((menuItem, index) => {
       return (
@@ -37,7 +26,7 @@ class Header extends Component {
           </h1>
           <nav className="app-header-menu">
             <ul>
-              {this.renderMenuItems(this.menuItems)}
+              {this.renderMenuItems(menuItems)}
             </ul>
           </nav>
         </div>
