@@ -5,6 +5,10 @@ const menuItems = [
     exact: true
   },
   {
+    to: '/pictures',
+    caption: 'Pictures'
+  },
+  {
     to: '/contact',
     caption: 'Contact'
   }

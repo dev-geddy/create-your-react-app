@@ -8,12 +8,12 @@ class Header extends Component {
     return menuItems.map((menuItem, index) => {
       const addProps = {
         to: menuItem.to,
-        exact: menuItem.exact
+        exact: menuItem.exact || false
       }
       return (
         <li key={index}>
           <NavLink className="menu-item"
-                   activeClassName="menu-itm--current"
+                   activeClassName="menu-item--current"
                    {...addProps}>{menuItem.caption}</NavLink>
         </li>
       )
