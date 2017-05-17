@@ -1,0 +1,42 @@
+.Pictures-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Picture {
+    width: 100%;
+}
+
+.Picture > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* large screens */
+@media all and (min-width: 1024px) {
+    .Picture {
+        width: 25%;
+    }
+}
+
+/* medium screens, likely tablets, mostly in portrait mode */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    .Picture {
+        width: 33.33%;
+    }
+}
+
+/* small screens, mainly phones in landscape or small tablets */
+@media all and (min-width: 426px) and (max-width: 767px) {
+    .Picture {
+        width: 50%;
+    }
+}
+
+/* mobile screens */
+@media all and (max-width: 425px) {
+    .Pictures-gallery {
+        display: block;
+    }
+}
