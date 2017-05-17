@@ -1,10 +1,13 @@
 .Pictures-gallery {
     display: flex;
     flex-wrap: wrap;
+    padding: 15px 0 25px;
+    margin: 0 -5px;
 }
 
 .Picture {
-    width: 100%;
+    border: 5px solid transparent;
+    box-sizing: border-box;
 }
 
 .Picture > img {
