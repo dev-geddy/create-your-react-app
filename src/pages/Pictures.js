@@ -7,6 +7,7 @@ const RenderPictures = (picturesList) => {
     return (
       <div className="Picture">
         <img src={picture.url} alt={picture.name} />
+        <div className="Picture-name">{picture.name}</div>
       </div>
     )
   })
