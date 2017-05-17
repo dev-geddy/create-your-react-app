@@ -13,13 +13,15 @@ it('has h1 title', () => {
 
 it('contains x2 NavLink (menu items)', () => {
   const component = shallow(<Header />)
-  expect(component.find('li > NavLink').length).toEqual(2)
+  expect(component.find('li > NavLink').length).toEqual(3)
 })
 
 it('navigation has correct links', () => {
   const component = shallow(<Header />)
   expect(component.find('li > NavLink').at(0).props().children).toContain("Home")
   expect(component.find('li > NavLink').at(0).props().to).toEqual("/")
-  expect(component.find('li > NavLink').at(1).props().children).toContain("Contact")
-  expect(component.find('li > NavLink').at(1).props().to).toEqual("/contact")
+  expect(component.find('li > NavLink').at(1).props().children).toContain("Pictures")
+  expect(component.find('li > NavLink').at(1).props().to).toEqual("/pictures")
+  expect(component.find('li > NavLink').at(2).props().children).toContain("Contact")
+  expect(component.find('li > NavLink').at(2).props().to).toEqual("/contact")
 })
