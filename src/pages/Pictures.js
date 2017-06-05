@@ -6,7 +6,7 @@ import './Pictures.css'
 const RenderPictures = (picturesList) => {
   return picturesList.map((picture, index) => {
     return (
-      <div className="Picture">
+      <div className="Picture" key={`MyPicture_${index}`}>
         <img src={picture.url} alt={picture.name}/>
         <div className="Picture-name">{picture.name}</div>
         <div className="Picture-details-link">

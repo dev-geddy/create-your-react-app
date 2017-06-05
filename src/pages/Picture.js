@@ -10,7 +10,7 @@ class Picture extends Component {
         <article>
           <h2>Picture details</h2>
           <h3>{pictures[pictureIndex].name}</h3>
-          <p>It's only about a single picture.</p>
+          <p>It is only about a single picture.</p>
           <div>
             <img src={pictures[pictureIndex].url} alt="Nice one"/>
           </div>
