@@ -19,7 +19,11 @@
   font-weight: 400;
 }
 
-.Picture > img {
+.Picture > a {
+  display: block;
+}
+
+.Picture > a > img {
   display: block;
   width: 100%;
   height: auto;

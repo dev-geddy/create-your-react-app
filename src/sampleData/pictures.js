@@ -1,19 +1,19 @@
 const pictures = [
   {
-    name: "Landscape",
-    url: "/images/picture-00.png",
+    name: "Architecture",
+    url: "/images/architecture.jpg",
   },
   {
-    name: "Bird's Eye View",
-    url: "/images/picture-00.png",
+    name: "Night Shot",
+    url: "/images/night-shot.jpg",
   },
   {
-    name: "Vehicle",
-    url: "/images/picture-00.png",
+    name: "The Shard",
+    url: "/images/shard-clouds.jpg",
   },
   {
-    name: "Clouds",
-    url: "/images/picture-00.png",
+    name: "Tower Bridge",
+    url: "/images/tower-bridge.jpg",
   }
 ]
 
