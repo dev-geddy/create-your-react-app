@@ -19,6 +19,15 @@
   font-weight: 400;
 }
 
+.Picture-like {
+  padding: 5px;
+}
+
+.Picture-like > span {
+  display: block;
+  padding: 6px 10px;
+}
+
 .Picture > a {
   display: block;
 }
