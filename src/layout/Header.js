@@ -5,19 +5,21 @@ import menuItems from '../sampleData/menuItems'
 
 class Header extends Component {
   renderMenuItems(menuItems) {
-    return menuItems.map((menuItem, index) => {
-      const addProps = {
-        to: menuItem.to,
-        exact: menuItem.exact
-      }
-      return (
-        <li key={index}>
-          <NavLink className="menu-item"
-                   activeClassName="menu-itm--current"
-                   {...addProps}>{menuItem.caption}</NavLink>
-        </li>
-      )
-    })
+    return menuItems.map(this.renderMenuItem)
+  }
+
+  renderMenuItem(menuItem, index) {
+    const addProps = {
+      to: menuItem.to,
+      exact: menuItem.exact || false
+    }
+    return (
+      <li key={index}>
+        <NavLink className="menu-item"
+                 activeClassName="menu-item--current"
+                 {...addProps}>{menuItem.caption}</NavLink>
+      </li>
+    )
   }
 
   render() {
