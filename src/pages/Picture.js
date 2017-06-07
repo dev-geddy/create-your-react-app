@@ -9,10 +9,9 @@ class Picture extends Component {
     return (
       <div className="app-content-width">
         <article>
-          <h2>Picture details</h2>
-          <h3>{pictures[pictureIndex].name}</h3>
+          <h2>{pictures[pictureIndex].name}</h2>
           <p>It is only about a single picture. Go back to <Link to="/pictures">gallery</Link></p>
-          <div>
+          <div className="Picture-full">
             <img src={pictures[pictureIndex].url} alt="Nice one"/>
           </div>
         </article>
